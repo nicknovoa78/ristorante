@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #faf8f3;
+}
+
+
+/* NAVBAR */
+
+header {
+    background-color: #1f1f1f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #d4a017;
+}
+
+.btn-prenota,
+.btn {
+    background-color: #b8860b;
+    color: white;
+
+    padding: 12px 20px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn-prenota:hover,
+.btn:hover {
+    background-color: #8f6808;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1513104890138-7c749659a591")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+
+    margin: auto;
+
+    padding: 30px;
+
+    color: white;
+}
+
+.sottotitolo {
+    color: #b8860b;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* SEZIONI */
+
+.menu-section,
+.contact,
+.about,
+.booking {
+    padding: 90px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2,
+.about h2,
+.booking h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+/* MENU */
+
+.menu-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+}
+
+.menu-category {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.menu-category h3 {
+    font-size: 28px;
+    color: #b8860b;
+
+    margin-bottom: 25px;
+}
+
+.piatto {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.piatto:last-child {
+    border-bottom: none;
+}
+
+.piatto h4 {
+    margin-bottom: 5px;
+}
+
+.piatto p {
+    color: #777;
+}
+
+.piatto span {
+    color: #b8860b;
+    font-weight: bold;
+}
+
+
+/* ABOUT */
+
+.about {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-text p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* CONTATTI */
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    text-align: center;
+}
+
+.contact-container div {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+}
+
+
+/* PRENOTAZIONE */
+
+.booking {
+    text-align: center;
+
+    background-color: #eee9df;
+}
+
+.booking form {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    gap: 15px;
+}
+
+.booking input {
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+#messaggio {
+    font-weight: bold;
+    color: green;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #1f1f1f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
